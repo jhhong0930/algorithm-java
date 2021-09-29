@@ -37,10 +37,11 @@ public class L1_Two_Sum {
         // PASS Runtime: 1ms, Memory: 39MB
         Map<Integer, Integer> map = new HashMap<>();
 
-        for(int i=0; i < nums.length; i++) {
+        for (int i=0; i < nums.length; i++) {
+
             int match2 = target - nums[i];
 
-            if(map.containsKey(match2) ) {
+            if (map.containsKey(match2)) {
                 return new int[] {i, map.get(match2)};
             }
 

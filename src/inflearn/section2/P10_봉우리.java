@@ -62,6 +62,6 @@ public class P10_봉우리 {
             }
         }
 
-        System.out.println();
+        System.out.println(solution(n, arr));
     }
 }

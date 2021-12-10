@@ -15,13 +15,10 @@ public class P64061_크레인_인형뽑기_게임 {
                 int doll = board[j][move - 1];
 
                 if (doll != 0) {
-                    if (stack.isEmpty()) stack.push(doll);
-                    else {
-                        if (stack.peek() == doll) {
-                            stack.pop();
-                            answer += 2;
-                        } else stack.push(doll);
-                    }
+                    if (!stack.isEmpty() && stack.peek() == doll) {
+                        stack.pop();
+                        answer += 2;
+                    } else stack.push(doll);
 
                     board[j][move - 1] = 0;
                     break;

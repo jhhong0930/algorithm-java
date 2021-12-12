@@ -8,14 +8,23 @@ public class B1541_잃어버린_괄호 {
 
     public static int solution(String str) {
 
-        String[] temp = str.split("\\+|-");
+        String[] splitWithMinus = str.split("-");
+        int sum = Integer.MIN_VALUE;
 
-        for (String s : temp) {
-            System.out.println(s);
+        for (int i=0; i<splitWithMinus.length; i++) {
+
+            int temp = 0;
+            String[] splitWithPlus = splitWithMinus[i].split("\\+");
+
+            for (int j=0; j<splitWithPlus.length; j++) temp += Integer.parseInt(splitWithPlus[j]);
+
+            if (sum == Integer.MIN_VALUE) sum = temp;
+            else sum -= temp;
         }
 
-        return 0;
+        return sum;
     }
+
 
     public static void main(String[] args) throws IOException {
 

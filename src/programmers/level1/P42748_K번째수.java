@@ -1,9 +1,6 @@
 package programmers.level1;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 public class P42748_K번째수 {
 
@@ -16,15 +13,34 @@ public class P42748_K번째수 {
             int start = commands[i][0] - 1;
             int end = commands[i][1] - 1;
             int target = commands[i][2] - 1;
-            List<Integer> list = new ArrayList<>();
+            int[] temp = new int[end - start + 1];
 
-            for (int j=start; j<=end; j++) list.add(array[j]);
-            Collections.sort(list);
+            int idx = 0;
+            for (int j=start; j<=end; j++) temp[idx++] = array[j];
+            sort(temp);
 
-            answer[i] = list.get(target);
+            answer[i] = temp[target];
         }
 
         return answer;
+    }
+
+    static int[] sort(int[] arr) {
+
+        for (int i=0; i<arr.length-1; i++) {
+
+            int idx = i;
+
+            for (int j=i+1; j<arr.length; j++) if (arr[j] < arr[idx]) idx = j;
+
+            if (idx != i) {
+                int temp = arr[idx];
+                arr[idx] = arr[i];
+                arr[i] = temp;
+            }
+        }
+
+        return arr;
     }
 
     public static void main(String[] args) {

@@ -8,44 +8,22 @@ public class L20_Valid_Parentheses {
 
         Stack<Character> stack = new Stack<>();
 
-        for (int i=0; i<s.length(); i++) {
-
-            // 여는 괄호일 때
-            if (s.charAt(i) == '(' || s.charAt(i) == '[' || s.charAt(i) == '{') {
-                stack.push(s.charAt(i));
-            } else {
-
+        for (char x : s.toCharArray()) {
+            if (x == '(' || x == '[' || x == '{') stack.push(x);
+            else { // 닫는 괄호일 때
                 if (stack.isEmpty()) return false;
-
-                switch(s.charAt(i)) {
-
+                switch (x) {
                     case ')':
-                        if (stack.peek() == '[' || stack.peek() == '{') {
-                            return false;
-                        } else {
-                            stack.pop();
-                        }
+                        if (stack.pop() != '(') return false;
                         break;
-
                     case ']':
-                        if (stack.peek() == '(' || stack.peek() == '{') {
-                            return false;
-                        } else {
-                            stack.pop();
-                        }
+                        if (stack.pop() != '[') return false;
                         break;
-
                     case '}':
-                        if (stack.peek() == '[' || stack.peek() == '(') {
-                            return false;
-                        } else {
-                            stack.pop();
-                        }
+                        if (stack.pop() != '{') return false;
                         break;
                 }
-
             }
-
         }
 
         return stack.isEmpty();

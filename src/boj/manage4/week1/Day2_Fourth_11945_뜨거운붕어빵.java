@@ -2,6 +2,9 @@ package boj.manage4.week1;
 
 import java.util.Scanner;
 
+/**
+ * https://www.acmicpc.net/problem/11945
+ */
 public class Day2_Fourth_11945_뜨거운붕어빵 {
     public static void solution() {
         Scanner sc = new Scanner(System.in);

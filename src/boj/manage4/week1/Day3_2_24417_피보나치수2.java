@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 public class Day3_2_24417_피보나치수2 {
 
-    private static int MOD = 1_000_000_007;
+    private static final int MOD = 1_000_000_007;
 
     private static long fib(int n) {
         if (n == 1 || n == 2) {

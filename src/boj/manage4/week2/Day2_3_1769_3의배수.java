@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * https://www.acmicpc.net/problem/1769
  */
-public class Day1_3_1769_3의배수 {
+public class Day2_3_1769_3의배수 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("숫자를 입력하세요: ");

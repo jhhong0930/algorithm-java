@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * https://www.acmicpc.net/problem/10845
  */
-public class Day1_4_10845_큐 {
+public class Day2_4_10845_큐 {
     private static int QUEUE_SIZE = 10000;
     private static int[] queue = new int[QUEUE_SIZE];
     private static int front = 0;

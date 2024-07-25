@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * https://www.acmicpc.net/problem/17608
  */
-public class Day1_1_17608_막대기 {
+public class Day2_1_17608_막대기 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("2 ~ 100,000 사이의 숫자를 입력하세요: ");

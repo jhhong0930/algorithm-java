@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * https://www.acmicpc.net/problem/12605
  */
-public class Day1_2_12605_단어순서뒤집기 {
+public class Day2_2_12605_단어순서뒤집기 {
     private static void solution(int num, String str) {
         String[] strArr = str.split(" ");
         // 200ms

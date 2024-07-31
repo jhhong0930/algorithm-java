@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * https://www.acmicpc.net/problem/6186
  */
-public class Day1_1_6186_BestGrass {
+public class Day2_1_6186_BestGrass {
     private static int r;
     private static int c;
     private static char[][] pasture;

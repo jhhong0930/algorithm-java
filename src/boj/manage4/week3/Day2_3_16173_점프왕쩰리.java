@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * https://www.acmicpc.net/problem/16173
  */
-public class Day1_3_16173_점프왕쩰리 {
+public class Day2_3_16173_점프왕쩰리 {
     private static int n;
     private static int[][] board;
     private static boolean[][] visited;

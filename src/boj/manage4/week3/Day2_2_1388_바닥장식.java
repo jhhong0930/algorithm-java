@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * https://www.acmicpc.net/problem/1388
  */
-public class Day1_2_1388_바닥장식 {
+public class Day2_2_1388_바닥장식 {
     private static int r;
     private static int c;
     private static char[][] floor;
